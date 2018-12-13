@@ -31,7 +31,7 @@ class Form extends Component{
 
     render(){
         return(
-            <form className="p-5" onSubmit={this.onSubmitForm}>
+            <form className="p-5" class="container" onSubmit={this.onSubmitForm}>
                 <div className="form-group">
                     <label for="formGroupExampleInput">Titulo del objeto</label>
                     <input type="text" className="form-control" id="name" placeholder="Que objeto te encontraste?"
@@ -46,15 +46,6 @@ class Form extends Component{
                     value={this.state.last_name}
                     />
                 </div>
-                <div className="form-group">
-                    <label for="formGroupExampleInput2">Subir imagen</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1"
-                    onChange={this.onInputChange}
-                    value={this.state.biography}
-                    />
-                </div>
-
-
                 <button className="btn btn-success" type="submit">Publicar</button>
             </form>
         )

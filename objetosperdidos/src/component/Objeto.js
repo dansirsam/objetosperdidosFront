@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
-import Card from './Card';
+import Card2 from './Card2';
 import Navbar from './Navbar';
 import Form from './Form'
 import axios from 'axios';
 
-class Home extends Component{
+class Objeto extends Component{
   constructor(props){
     super(props);
     this.state = {
-      listCards:[<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>],
+      listCards:[<Card2/>],
       listAuthors:[]
     }
   }
@@ -25,10 +25,10 @@ class Home extends Component{
 
   renderCards = () => {
     if (this.state.listAuthors.length === 0){
-      return <center><h1>Cargando objetos perdidos....</h1></center>
+      return <center><br></br><h5>Cargando detalles del objeto....</h5></center>
     }else{
       const cardListAuthors = this.state.listAuthors.map(author => {
-        return <Card nombre={author.name} bio={author.biography}/>
+        return <Card2 nombre={author.name} bio={author.biography} apell={author.last_name} naci={author.nacionalidad} gene={author.gender} edad={author.age}/>
       });
       return cardListAuthors;
       //[<Card/>,<Card/>,<Card/>,<Card/>...]
@@ -39,15 +39,14 @@ class Home extends Component{
     return (
       <div>
         <Navbar/>
-        <center><br></br><h1>Publicar un objeto perdido</h1></center>
-        <Form/>
+        <center><br></br><h1>Detalles del objeto perdido</h1></center>
         <div className="App row ml-5" class="container">
-          {/* {this.state.listCards} */}
-          {this.renderCards()}
+          {/* {this.state.listCards}*/}
+          {this.renderCards()} 
         </div>
       </div>
     );
   }
 }
 
-export default Home;
+export default Objeto;

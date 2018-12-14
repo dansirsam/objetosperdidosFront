@@ -33,13 +33,13 @@ class Form2 extends Component{
         return(
             <form className="p-5" class="container" onSubmit={this.onSubmitForm}>
                 <div className="form-group">
-                    <textarea className="form-control" id="name" aria-label="With textarea" placeholder="Es tuyo este objeto? comenta..."
+                    <textarea className="form-control" id="name" aria-label="With textarea" placeholder="¿Es tuyo este objeto? Comenta..."
                         onChange={this.onInputChange}
                         value={this.state.name}
                     />
                 </div>
                 <p></p>
-                <button type="button" class="btn btn-primary" type="submit">Publicar Comentario..</button>
+                <button type="button" class="btn btn-primary" type="submit">Publicar Comentario...</button>
             </form>
         )
     }

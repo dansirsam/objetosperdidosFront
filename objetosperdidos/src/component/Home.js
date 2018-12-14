@@ -9,27 +9,27 @@ class Home extends Component{
     super(props);
     this.state = {
       listCards:[<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>,<Card/>],
-      listAuthors:[]
+      listObjetos:[]
     }
   }
 
   componentDidMount(){
-    axios.get('https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/')
-      .then(authors => {
+    axios.get('http://127.0.0.1:3002/all/objetoPerdido')
+      .then(objetos => {
         this.setState({
-          listAuthors:authors.data
+          listObjetos:objetos.data
         })
       }).catch(err => console.log(err))
   }
 
   renderCards = () => {
-    if (this.state.listAuthors.length === 0){
+    if (this.state.listObjetos.length === 0){
       return <center><h1>Cargando objetos perdidos....</h1></center>
     }else{
-      const cardListAuthors = this.state.listAuthors.map(author => {
-        return <Card nombre={author.name} bio={author.biography} ide={author.id}/>
+      const cardListObjetos = this.state.listObjetos.map(objPerdido => {
+        return <Card titulo={objPerdido.titulo} descripcion={objPerdido.descripcion} ide={objPerdido._id}/>
       });
-      return cardListAuthors;
+      return cardListObjetos;
       //[<Card/>,<Card/>,<Card/>,<Card/>...]
     }
   }

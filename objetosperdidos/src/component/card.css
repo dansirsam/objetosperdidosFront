@@ -1,11 +1,15 @@
-.Card{
-  padding: 1rem;
+.Card {
+    padding: 1rem;
 }
 
-.image{
-  width: 20rem;
+.image {
+    width: 20rem;
 }
 
-.subtitle{
-  width: 19rem;
+.subtitle {
+    width: 19rem;
+}
+
+.invisible {
+    visibility: hidden;
 }

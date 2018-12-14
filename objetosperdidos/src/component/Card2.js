@@ -12,6 +12,17 @@ class Card2 extends Component{
                 <center>
                 <img className="card-img-top image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqB58MSqMPIXcgIZrxljSIPeDlnvfLdG5z0mr2FsKMIVZkMi-H4g" alt="Card image cap"/>
                 <p><br></br></p>
+
+
+                 <nav class="navbar navbar-dark bg-dark">
+                    <a className="navbar-brand" style={{color:"#ffff"}}><strong>DESCRIPCION DEL OBJETO</strong></a>
+                </nav>
+                <div className="card-body image">
+                    <p className="card-text subtitle">{this.props.descripcion}</p>
+                </div>
+                
+
+
                 <nav class="navbar navbar-dark bg-dark">
                 <a className="navbar-brand" style={{color:"#ffff"}}><strong>DATOS DEL AUTOR</strong></a>
                 </nav>
@@ -31,13 +42,10 @@ class Card2 extends Component{
                         </div>
                     </div>
 
-                <p><br></br></p>
-                <nav class="navbar navbar-dark bg-dark">
-                    <a className="navbar-brand" style={{color:"#ffff"}}><strong>DESCRIPCION DEL OBJETO</strong></a>
-                </nav>
-                <div className="card-body image">
-                    <p className="card-text subtitle">{this.props.bio}</p>
-                </div>
+               
+
+
+
                 <p><br></br></p>
                 <nav class="navbar navbar-dark bg-dark">
                     <a className="navbar-brand" style={{color:"#ffff"}}><strong>COMENTARIOS</strong></a>

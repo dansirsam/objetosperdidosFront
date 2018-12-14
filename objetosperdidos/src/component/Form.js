@@ -6,12 +6,9 @@ class Form extends Component{
     constructor(props){
         super(props);
         this.state = {
-            name:"",
-            last_name:"",
-            biography:"",
-            gender:"F",
-            nacionalidad:"MX",
-            age:0,   
+            titulo:"",
+            descripcion:"",
+            estatus:false
         }
     }
 
@@ -24,8 +21,8 @@ class Form extends Component{
 
     onSubmitForm = (e) => {
         e.preventDefault();
-        axios.post('https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/',this.state)
-            .then(author => alert('Author create <3'))
+        axios.post('http://127.0.0.1:3002/publicar/objetoPerdido',this.state)
+            .then(author => alert('Objeto perdido registrado'))
             .catch(err => alert(err))
     }
 
@@ -33,17 +30,17 @@ class Form extends Component{
         return(
             <form className="p-5" class="container" onSubmit={this.onSubmitForm}>
                 <div className="form-group">
-                    <label for="formGroupExampleInput">Titulo del objeto</label>
-                    <input type="text" className="form-control" id="name" placeholder="Que objeto te encontraste?"
+                    <label for="formGroupExampleInput">Título del objeto</label>
+                    <input type="text" className="form-control" id="titulo" placeholder="¿Qué objeto te encontraste?"
                         onChange={this.onInputChange}
-                        value={this.state.name}
+                        value={this.state.titulo}
                     />
                 </div>
                 <div className="form-group">
                     <label for="formGroupExampleInput2">Descripcion</label>
-                    <input type="text" class="form-control" id="last_name" placeholder="Describe las caracteristicas como color, marca, tamaño, etc.."
+                    <input type="text" class="form-control" id="descripcion" placeholder="Describe las características como color, marca, tamaño, etc.."
                     onChange={this.onInputChange}
-                    value={this.state.last_name}
+                    value={this.state.descripcion}
                     />
                 </div>
                 <button className="btn btn-success" type="submit">Publicar</button>

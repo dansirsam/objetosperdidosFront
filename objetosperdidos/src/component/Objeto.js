@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
 import Card2 from './Card2';
 import Navbar from './Navbar';
-import Form from './Form'
 import axios from 'axios';
 
 class Objeto extends Component{

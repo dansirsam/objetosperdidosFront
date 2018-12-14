@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
 import Card from './Card';
 import Navbar from './Navbar';
 import Form from './Form'
@@ -28,7 +27,7 @@ class Home extends Component{
       return <center><h1>Cargando objetos perdidos....</h1></center>
     }else{
       const cardListAuthors = this.state.listAuthors.map(author => {
-        return <Card nombre={author.name} bio={author.biography}/>
+        return <Card nombre={author.name} bio={author.biography} ide={author.id}/>
       });
       return cardListAuthors;
       //[<Card/>,<Card/>,<Card/>,<Card/>...]

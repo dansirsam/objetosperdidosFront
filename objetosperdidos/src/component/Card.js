@@ -12,7 +12,7 @@ detalles = () => {
         return(
             <div className="card Card mt-5 mr-3">
                 <center>
-                <img className="card-img-top image" src="https://estaticos.elperiodico.com/resources/jpg/1/6/1502194230861.jpg" alt="Card image cap"/>
+                <img className="card-img-top image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqB58MSqMPIXcgIZrxljSIPeDlnvfLdG5z0mr2FsKMIVZkMi-H4g" alt="Card image cap"/>
                 <div className="card-body image">
                     <h5 className="card-title">{this.props.nombre}</h5>
                     <p className="card-text subtitle">{this.props.bio}</p>

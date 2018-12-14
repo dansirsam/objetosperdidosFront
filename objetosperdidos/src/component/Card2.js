@@ -1,18 +1,16 @@
 import React,{Component} from 'react';
 import './card.css'
+import Form2 from './Form2'
 
 class Card2 extends Component{
 
-comentario = () => {
-  
-}
 
 
     render(){
         return(
             <div className="card Card mt-5 mr-3">
                 <center>
-                <img className="card-img-top image" src="https://estaticos.elperiodico.com/resources/jpg/1/6/1502194230861.jpg" alt="Card image cap"/>
+                <img className="card-img-top image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqB58MSqMPIXcgIZrxljSIPeDlnvfLdG5z0mr2FsKMIVZkMi-H4g" alt="Card image cap"/>
                 <p><br></br></p>
                 <nav class="navbar navbar-dark bg-dark">
                 <a className="navbar-brand" style={{color:"#ffff"}}><strong>DATOS DEL AUTOR</strong></a>
@@ -46,13 +44,8 @@ comentario = () => {
                 </nav>
 
                 <p><br></br></p>
-                <div className="input-group">
-                    <div className="input-group-prepend">
-                    <span className="input-group-text">Agregar Comentario</span>
-                </div>
-                <textarea className="form-control" aria-label="With textarea"></textarea>
-                </div><br></br>
-                <button type="button" onClick = {this.comentario} class="btn btn-primary">Publicar comentario..</button>
+                <Form2/>
+                <p><br></br></p>
                 </center>
                 </div>
         )

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Card from './Card';
 import Navbar from './Navbar';
 import Form from './Form'
+import Carrusel from './Carrusel'
 import axios from 'axios';
 
 class Home extends Component{
@@ -38,12 +39,13 @@ class Home extends Component{
     return (
       <div>
         <Navbar/>
-        <center><br></br><h1>Publicar un objeto perdido</h1></center>
+        <Carrusel/>
         <Form/>
         <div className="App row ml-5" class="container">
           {/* {this.state.listCards} */}
           {this.renderCards()}
         </div>
+        <br/><br/>
       </div>
     );
   }

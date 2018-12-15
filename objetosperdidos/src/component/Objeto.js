@@ -37,7 +37,7 @@ class Objeto extends Component{
   //   }
   console.log(this.listobjetos);
 
-      return <Card2 titulo={this.state.listobjetos.titulo} descripcion={this.state.listobjetos.descripcion} />
+      return <Card2 titulo={this.state.listobjetos.titulo} descripcion={this.state.listobjetos.descripcion} comentario={this.state.listobjetos.comentario}/>
 
 
   }
@@ -52,6 +52,7 @@ class Objeto extends Component{
           {/* {this.state.listCards}*/}
           {this.renderCards()} 
         </div>
+        <br/><br/>
       </div>
     );
   }

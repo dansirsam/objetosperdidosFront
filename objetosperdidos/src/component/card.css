@@ -13,3 +13,7 @@
 .invisible {
     visibility: hidden;
 }
+
+.pointer {
+    cursor: pointer;
+}

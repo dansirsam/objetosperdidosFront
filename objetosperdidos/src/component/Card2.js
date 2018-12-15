@@ -20,37 +20,13 @@ class Card2 extends Component{
                 <div className="card-body image">
                     <p className="card-text subtitle">{this.props.descripcion}</p>
                 </div>
-                
-
-
-                <nav class="navbar navbar-dark bg-dark">
-                <a className="navbar-brand" style={{color:"#ffff"}}><strong>DATOS DEL AUTOR</strong></a>
-                </nav>
-                
-                    <div class="card">
-                        <div class="card-body">
-                            <h6><strong>NOMBRE:</strong></h6>
-                            <p>{this.props.nombre}</p>
-                            <h6><strong>APELLIDO:</strong></h6>
-                            <p>{this.props.apell}</p>
-                            <h6><strong>NACIONALIDAD:</strong></h6>
-                            <p>{this.props.naci}</p>
-                            <h6><strong>GENERO:</strong></h6>
-                            <p>{this.props.gene}</p>
-                            <h6><strong>EDAD:</strong></h6>
-                            <p>{this.props.edad}</p>
-                        </div>
-                    </div>
-
-               
-
-
-
                 <p><br></br></p>
                 <nav class="navbar navbar-dark bg-dark">
                     <a className="navbar-brand" style={{color:"#ffff"}}><strong>COMENTARIOS</strong></a>
                 </nav>
-
+                <div className="card-body image">
+                    <p className="card-text subtitle">{this.props.comentario}</p>
+                </div>
                 <p><br></br></p>
                 <Form2/>
                 <p><br></br></p>

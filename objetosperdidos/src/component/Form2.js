@@ -6,12 +6,7 @@ class Form2 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            name:"",
-            last_name:"",
-            biography:"",
-            gender:"F",
-            nacionalidad:"MX",
-            age:0,   
+            comentario:""
         }
     }
 
@@ -24,8 +19,8 @@ class Form2 extends Component{
 
     onSubmitForm = (e) => {
         e.preventDefault();
-        axios.post('https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/',this.state)
-            .then(author => alert('Author create <3'))
+        axios.post('http://127.0.0.1:3002/comentar/objetoPerdido/',this.state)
+            .then(author => alert('Comentario agregado :v'))
             .catch(err => alert(err))
     }
 
@@ -33,9 +28,9 @@ class Form2 extends Component{
         return(
             <form className="p-5" class="container" onSubmit={this.onSubmitForm}>
                 <div className="form-group">
-                    <textarea className="form-control" id="name" aria-label="With textarea" placeholder="¿Es tuyo este objeto? Comenta..."
+                    <textarea className="form-control" id="comentario" aria-label="With textarea" placeholder="¿Es tuyo este objeto? Comenta..."
                         onChange={this.onInputChange}
-                        value={this.state.name}
+                        value={this.state.comentario}
                     />
                 </div>
                 <p></p>
